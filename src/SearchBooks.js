@@ -14,7 +14,7 @@ class SearchBooks extends Component {
         result:[]
     };
 
-    onQueryChanged = (e) => {
+    queryChangeHandler = (e) => {
         this.setState({ query: e.target.value.trim() });
         if (e.target.value.trim().length > 2){
             this.handleSearch();
@@ -25,7 +25,7 @@ class SearchBooks extends Component {
 
     handleSearch = () => {
         search(this.state.query).then(books => {
-            const curr = this.props.currBooks.filter(b => b.title.includes(this.state.query));
+            const curr = this.props.currBooks.filter(b => b.title.toLowerCase().includes(this.state.query.toLowerCase()));
             (books != null && books.length > 0) ? 
                 this.setState({
                     result: books.filter(b =>
@@ -49,7 +49,7 @@ class SearchBooks extends Component {
                     <Link to="/" className="close-search">Close</Link>
                     <div className="search-books-input-wrapper">
                         <input
-                            onChange={this.onQueryChanged}
+                            onChange={this.queryChangeHandler}
                             value={this.state.query}
                             type="text"
                             placeholder="Search by title or author" />
