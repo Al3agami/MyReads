@@ -97,12 +97,12 @@ This is the root of your app. Contains static HTML right now
 ### `ShelfsList.js`
 This is the main component of all books' shelfs list, inside root.
 Takes two Props:
-```js
+* ```js
 onShelfChange
 ```
 Which is a function in [`App.js`](src/App.js) to apply selected change of shelf for any book
 
-```js
+* ```js
 books
 ```
 Which is an array of all books loaded from the server
