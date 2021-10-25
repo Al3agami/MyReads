@@ -19,10 +19,14 @@ To get started developing right away:
 ├── package.json # npm package manager file. It's unlikely that you'll need to modify this.
 ├── public
 │   ├── favicon.ico # React Icon, You may change if you wish.
-│   └── index.html # DO NOT MODIFY
+│   └── index.html # DO NOT MODIFYs
 └── src
     ├── App.css # Styles for your app. Feel free to customize this as you desire.
     ├── App.js # This is the root of your app. Contains static HTML right now.
+    ├── ShelfsList.js # This is the main component of all the books' shelfs list, inside root.
+    ├── Shelf.js # This component represent one shelf's data in ShelfsList component.
+    ├── Book.js # This component represent one book inside a Shelf component.
+    ├── SearchBooks.js # This is the main component search view that includes multiple Book components (one for each book result).
     ├── App.test.js # Used for testing. Provided with Create React App. Testing is encouraged, but not required.
     ├── BooksAPI.js # A JavaScript API for the provided Udacity backend. Instructions for the methods are below.
     ├── icons # Helpful images for your app. Use at your discretion.
