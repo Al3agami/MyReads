@@ -96,15 +96,63 @@ This is the root of your app. Contains static HTML right now
 
 ### `ShelfsList.js`
 This is the main component of all books' shelfs list, inside root.
+Takes two Props:
+```js
+onShelfChange
+```
+Which is a function in [`App.js`](src/App.js) to apply selected change of shelf for any book
+
+```js
+books
+```
+Which is an array of all books loaded from the server
+
 
 ### `Shelf.js`
 This component represent one shelf's data in ShelfsList component.
+Takes three Props:
+```js
+shelfName
+```
+Which is a string holds the shelf title appears on the page.
+
+```js
+books
+```
+Which is an array of all books of that shelf filtered in the [`ShelfsList.js`](src/ShelfsList.js) component.
+
+```js
+onShelfChange
+```
+Which is same function passed from [`ShelfsList.js`](src/ShelfsList.js) component.
+
 
 ### `Book.js`
 This component represent one book inside a Shelf component.
+Takes two Props:
+```js
+book
+```
+Which is an object represent one book data.
+
+```js
+onShelfChange
+```
+Which is same function passed from [`Shelf.js`](src/Shelf.js) component.
+
 
 ### `SearchBooks.js`
 This is the main component search view that includes multiple Book components (one for each book result).
+Takes two Props:
+```js
+currBooks
+```
+Which is an array that contains all the books of the current state of the App.
+
+```js
+onShelfChange
+```
+Which is a function in [`App.js`](src/App.js) to apply selected change of shelf for any book either new book or an already exist book in the App main state.
 
 
 
