@@ -23,7 +23,7 @@ To get started developing right away:
 └── src
     ├── App.css # Styles for your app. Feel free to customize this as you desire.
     ├── App.js # This is the root of your app. Contains static HTML right now.
-    ├── ShelfsList.js # This is the main component of all the books' shelfs list, inside root.
+    ├── ShelfsList.js # This is the main component of all books' shelfs list, inside root.
     ├── Shelf.js # This component represent one shelf's data in ShelfsList component.
     ├── Book.js # This component represent one book inside a Shelf component.
     ├── SearchBooks.js # This is the main component search view that includes multiple Book components (one for each book result).
@@ -95,7 +95,7 @@ The frontend of this project developed using react.js, in [`src`](src/) you can 
 This is the root of your app. Contains static HTML right now
 
 ### `ShelfsList.js`
-This is the main component of all the books' shelfs list, inside root.
+This is the main component of all books' shelfs list, inside root.
 
 ### `Shelf.js`
 This component represent one shelf's data in ShelfsList component.
