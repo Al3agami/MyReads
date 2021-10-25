@@ -38,8 +38,6 @@ class SearchBooks extends Component {
                     ).concat(...curr)
                 }) :
                 this.setState({ result: [...curr] });
-
-                console.log('All Res: ', this.state.result);
             }
         );
     }
@@ -59,7 +57,7 @@ class SearchBooks extends Component {
                 </div>
                 <div className="search-books-results">
                     {this.state.result.length === 0 && this.state.query.length > 2 ?
-                        <h4>No Books Match Your Query</h4> :
+                        <h4 className="no-match-found">No Books Match Your Query</h4> :
                         (
                             <ol className="books-grid">
                                 {this.state.result.map(book => (
