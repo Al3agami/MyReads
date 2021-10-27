@@ -15,17 +15,18 @@ class SearchBooks extends Component {
     };
 
     queryChangeHandler = (e) => {
-        this.setState({ query: e.target.value.trim() });
-        if (e.target.value.trim().length > 2){
-            this.handleSearch();
+        const query = e.target.value;
+        this.setState({ query });
+        if (query.length > 2){
+            this.handleSearch(query);
         }else{
             this.setState({result:[]});
         }
     };
 
-    handleSearch = () => {
-        search(this.state.query).then(books => {
-            const curr = this.props.currBooks.filter(b => b.title.toLowerCase().includes(this.state.query.toLowerCase()));
+    handleSearch = (query) => {
+        search(query.trim()).then(books => {
+            const curr = this.props.currBooks.filter(b => b.title.toLowerCase().includes(query.toLowerCase()));
             (books != null && books.length > 0) ? 
                 this.setState({
                     result: books.filter(b =>
