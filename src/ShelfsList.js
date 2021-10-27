@@ -38,7 +38,7 @@ const ShelfsList = (props) => {
                     </div>
                 </div>
                 <Link to="/search" className="open-search">
-                    <button>Add a book</button>
+                    Add a book
                 </Link>
             </div>
         );

@@ -66,10 +66,7 @@ class BooksApp extends React.Component {
           render={({history}) =>
             <SearchBooks
               currBooks={this.state.Books}
-              onShelfChange={(book, shelfId)=> {
-                this.handleShelfChange(book, shelfId);
-                history.push('/');
-              }}
+              onShelfChange={this.handleShelfChange}
             />
           }
         />
